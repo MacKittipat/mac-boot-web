@@ -2,6 +2,8 @@ package com.mackittipat.macbootweb.controller;
 
 import com.mackittipat.macbootweb.domain.User;
 import com.mackittipat.macbootweb.repository.UserRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,11 +16,14 @@ import java.util.List;
 @RequestMapping("/user")
 public class UserController {
 
+    private final static Logger log = LoggerFactory.getLogger(UserController.class);
+
     @Autowired
     private UserRepository userRepository;
 
     @RequestMapping(value = "/", method = RequestMethod.POST)
     public void create(@RequestBody User user) {
+        log.debug("Saving user : {}", user.toString());
         userRepository.save(user);
     }
 
