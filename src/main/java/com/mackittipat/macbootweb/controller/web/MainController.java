@@ -1,4 +1,4 @@
-package com.mackittipat.macbootweb.controller;
+package com.mackittipat.macbootweb.controller.web;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

@@ -1,4 +1,4 @@
-package com.mackittipat.macbootweb.controller;
+package com.mackittipat.macbootweb.controller.api;
 
 import com.mackittipat.macbootweb.domain.User;
 import com.mackittipat.macbootweb.repository.UserRepository;
@@ -13,10 +13,10 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/user")
-public class UserController {
+@RequestMapping("/api/user")
+public class UserRestController {
 
-    private final static Logger log = LoggerFactory.getLogger(UserController.class);
+    private final static Logger log = LoggerFactory.getLogger(UserRestController.class);
 
     @Autowired
     private UserRepository userRepository;

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Create User</title>
+</head>
+<body>
+<div>
+    <div th:each="user: ${userList}">
+        <p>
+            <span th:text="${user.id}"></span>
+            <span th:text="${user.name}"></span>
+        </p>
+    </div>
+</div>
+</body>
+</html>
