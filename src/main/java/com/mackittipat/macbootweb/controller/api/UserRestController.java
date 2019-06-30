@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/user")
+@RequestMapping("/api/users")
 public class UserRestController {
 
     private final static Logger log = LoggerFactory.getLogger(UserRestController.class);
@@ -31,5 +31,4 @@ public class UserRestController {
     public List<User> findAll() {
         return (List<User>) userRepository.findAll();
     }
-
 }
