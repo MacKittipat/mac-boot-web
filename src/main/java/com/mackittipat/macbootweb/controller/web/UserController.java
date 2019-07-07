@@ -30,13 +30,14 @@ public class UserController {
 
     @PostMapping("/create")
     public String createPost(@ModelAttribute User user) {
-        log.debug("Saving user : {}", user.toString());
+        log.info("Saving user : {}", user.toString());
         userRepository.save(user);
         return "user_create";
     }
 
     @GetMapping("/")
     public String list(Model model) {
+        log.info("Listing all user");
         List<User> userList = (List<User>) userRepository.findAll();
         model.addAttribute("userList", userList);
         return "user_list";

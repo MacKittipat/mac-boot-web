@@ -23,12 +23,13 @@ public class UserRestController {
 
     @RequestMapping(value = "/", method = RequestMethod.POST)
     public void create(@RequestBody User user) {
-        log.debug("Saving user : {}", user.toString());
+        log.info("Saving user : {}", user.toString());
         userRepository.save(user);
     }
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public List<User> findAll() {
+        log.info("Finding all user");
         return (List<User>) userRepository.findAll();
     }
 }
