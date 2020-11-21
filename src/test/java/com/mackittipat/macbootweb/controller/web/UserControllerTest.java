@@ -1,24 +1,18 @@
 package com.mackittipat.macbootweb.controller.web;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.mackittipat.macbootweb.controller.api.UserRestController;
 import com.mackittipat.macbootweb.domain.User;
 import com.mackittipat.macbootweb.repository.UserRepository;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
-import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
-import static org.junit.Assert.*;
-
-@RunWith(SpringRunner.class)
 // @WebMvcTest(value = UserControllerTest.class) // Cause error : java.lang.AssertionError: No ModelAndView found
 @WebMvcTest
 public class UserControllerTest {
